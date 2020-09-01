@@ -1,2 +1,5 @@
 .env
 myproject/__pycache__/
+*.py[cod]
+*.pyc
+media/
