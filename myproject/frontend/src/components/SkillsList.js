@@ -1,15 +1,14 @@
 import React from 'react';
 
 const SkillsList = (props) => {
-
     return (
-        <div className="ui list">
+        <ul>
             {props.skills.map(skill => (
-                <div className="item" key={skill}>
+                <li key={skill}>
                     {skill}
-                </div>  
+                </li>  
             ))}
-        </div>
+        </ul>
     )
 }
 
