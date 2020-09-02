@@ -1,19 +1,19 @@
 import React from 'react'
 import SkillsList from './SkillsList'
+import { Card } from 'react-bootstrap';
 
 const MyCards = (props) => {
 
     return (
-        <div className="card">
-            <div className ="content">
-                <div className= "center aligned header">
-                    {props.skills.name}
-                </div>
-                <div classname="center aligned">
+
+        <Card style={{ width: '18rem' }}>
+            <Card.Body>
+                <Card.Title>props.skills.name</Card.Title>
+                <Card.Text>
                     <SkillsList skills={props.skills.skills} />
-                </div>
-            </div>
-        </div>
+                </Card.Text>
+            </Card.Body>
+        </Card>
     )
 }
 

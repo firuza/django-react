@@ -1,14 +1,23 @@
 import React from 'react';
-import SkillsList from './SkillsList'
+import MyCards from './MyCards'
 
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import { Row, Col, Card } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 
 const Skills = () => {
 
-    const frontend = ['JavaScript','React/Redux','HTML','CSS','Bootstrap','SemanticUI']
-    const backend = ['Python', 'Django', 'AWS', 'PostgreSQL']
-    const gameDev = ['Unity','Phaser','PyGame']
+    const frontend = {
+        name: 'Frontend', 
+        skills: ['JavaScript','React/Redux','HTML','CSS','Bootstrap','SemanticUI']
+    }
+    const backend = {
+        name: 'Backend',
+        skills: ['Python', 'Django', 'AWS', 'PostgreSQL']
+    }
+    const gameDev = {
+        name: 'Game Development',
+        skills: ['Unity','Phaser','PyGame']
+    }
 
     return (
         <>
@@ -16,37 +25,14 @@ const Skills = () => {
 
             <Row>
                 <Col xs={4}>
-                    <Card style={{ width: '18rem' }}>
-                        <Card.Body>
-                            <Card.Title>Frontend Tech Stack</Card.Title>
-                            <Card.Text>
-                                <SkillsList skills = {frontend}/>
-                            </Card.Text>
-                        </Card.Body>
-                    </Card>
+                    <MyCards skills = {frontend} />
                 </Col>
-
                 <Col xs={4}>
-                    <Card style={{ width: '18rem' }}>
-                        <Card.Body>
-                            <Card.Title>Backend Tech Stack</Card.Title>
-                            <Card.Text>
-                                <SkillsList skills = {backend}/>
-                            </Card.Text>
-                        </Card.Body>
-                    </Card>
+                    <MyCards skills = {backend} />
                 </Col>
-
                 <Col xs={4}>
-                    <Card style={{ width: '18rem' }}>
-                        <Card.Body>
-                            <Card.Title>Game Development</Card.Title>
-                            <Card.Text>
-                                <SkillsList skills = {gameDev}/>
-                            </Card.Text>
-                        </Card.Body>
-                    </Card>
-                </Col>
+                    <MyCards skills = {gameDev} />
+                </Col>                
             </Row>
         </>
     )
