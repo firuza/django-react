@@ -12,7 +12,7 @@ const Skills = () => {
 
     return (
         <>
-            <h1 className="ui center aligned basic segment">Skills</h1>
+            <h1>Skills</h1>
 
             <Row>
                 <Col xs={4}>
