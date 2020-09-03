@@ -8,7 +8,7 @@ const MyCards = (props) => {
 
         <Card style={{ width: '18rem' }}>
             <Card.Body>
-                <Card.Title>props.skills.name</Card.Title>
+                <Card.Title>{props.skills.name}</Card.Title>
                 <Card.Text>
                     <SkillsList skills={props.skills.skills} />
                 </Card.Text>
