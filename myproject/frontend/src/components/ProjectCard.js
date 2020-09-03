@@ -1,13 +1,14 @@
 import React from 'react'
 import { Button, Card } from 'react-bootstrap';
+import logo from '../logo.svg';
 
 const ProjectCard = () => {
     return (
 
-        <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="" />
+        <Card border="danger" style={{ width: '18rem' }}>
+            <Card.Header>Project Title</Card.Header>
+            <Card.Img variant="top" src={logo} />
             <Card.Body>
-                <Card.Title>Project Title</Card.Title>
                 <Card.Text>
                     Project description
                 </Card.Text>
