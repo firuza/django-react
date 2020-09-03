@@ -9,6 +9,7 @@ const App = () => {
         <div>
             <Header />
             <Skills />
+            <Projects />
         </div>
     )
 }
