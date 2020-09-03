@@ -1,5 +1,5 @@
 import React from 'react';
-import MyCards from './MyCards'
+import SkillsCards from './SkillsCards'
 
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { Row, Col } from 'react-bootstrap';
@@ -25,13 +25,13 @@ const Skills = () => {
 
             <Row>
                 <Col xs={4}>
-                    <MyCards skills = {frontend} />
+                    <SkillsCards skills = {frontend} />
                 </Col>
                 <Col xs={4}>
-                    <MyCards skills = {backend} />
+                    <SkillsCards skills = {backend} />
                 </Col>
                 <Col xs={4}>
-                    <MyCards skills = {gameDev} />
+                    <SkillsCards skills = {gameDev} />
                 </Col>                
             </Row>
         </>
