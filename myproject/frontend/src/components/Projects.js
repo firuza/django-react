@@ -18,12 +18,19 @@ const Projects = () => {
                 <h2>Projects ({projectInfo.length})</h2>
                 <Container>
                     <CardColumns>
-                        <ProjectCard />
-                        <ProjectCard />
-                        <ProjectCard />
-                        <ProjectCard />
-                        <ProjectCard />
-                        <ProjectCard />
+
+                    {projectInfo.map(project => {
+                        return (
+                            <ProjectCard 
+                                name={project.name}
+                                description = {project.description}
+                                image={project.image}
+                                github={project.github}
+                                demo={project.demo}
+                                key={project.name}
+                            />
+                        )
+                    })}
                     </CardColumns>
                 </Container>
             </>
