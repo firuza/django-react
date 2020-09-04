@@ -12,26 +12,31 @@ const Projects = () => {
         setProjectInfo(response.data)
     }
 
+    const showProjects = () => {
+        return (
+            <>
+                <h2>Projects ({projectInfo.length})</h2>
+                <Container>
+                    <CardColumns>
+                        <ProjectCard />
+                        <ProjectCard />
+                        <ProjectCard />
+                        <ProjectCard />
+                        <ProjectCard />
+                        <ProjectCard />
+                    </CardColumns>
+                </Container>
+            </>
+        )
+    }
+
     useEffect(()=>{
         fetchProjects()
     },[])
 
     return (
         <>
-            <h2>Project Component</h2>
-            <h2>Total: {projectInfo.length}</h2>
-            {console.log(projectInfo)}
-
-            <Container>
-                <CardColumns>
-                    <ProjectCard />
-                    <ProjectCard />
-                    <ProjectCard />
-                    <ProjectCard />
-                    <ProjectCard />
-                    <ProjectCard />
-                </CardColumns>
-            </Container>
+            {showProjects()}
         </>
     )
 }
